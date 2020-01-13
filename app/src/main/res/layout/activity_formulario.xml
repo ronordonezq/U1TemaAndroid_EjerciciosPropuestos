@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Formulario">
+    tools:context=".Formulario"
+    android:orientation="vertical"
+    android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos de Alumno"
+        android:textSize="28dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/txtnombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/txtapellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellido"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/spngrado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/Grado" />
+
+    <Spinner
+        android:id="@+id/spnsexo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/Sexo"/>
+
+    <EditText
+        android:id="@+id/edtfecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:focusable="false"
+        android:clickable="true"
+        android:text="Selecciona una fecha"/>
+
+    <Button
+        android:id="@+id/btnenviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="Enviar"
+        android:text="Enviar"
+        android:textColor="@color/Blanco"
+        android:background="@color/colorPrimary"/>
+</LinearLayout>
